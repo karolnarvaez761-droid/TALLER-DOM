@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Boton interactivo</title>
+</head>
+<body>
+
+    <h1>Ejercicio 1: Boton interactivo</h1>
+
+    <p id="mensaje">Este es el texto original.</p>
+
+    <button id="boton">Cambiar texto</button>
+
+    <script>
+        let parrafo = document.getElementById("mensaje");
+        let boton = document.getElementById("boton");
+
+        boton.addEventListener("click", function() {
+            parrafo.textContent = "El texto cambio al presionar el boton.";
+            console.log("Se hizo clic en el boton.");
+        });
+    </script>
+
+</body>
+</html>

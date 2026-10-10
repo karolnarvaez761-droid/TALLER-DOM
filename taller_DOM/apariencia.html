@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio de apariencia</title>
+
+    <style>
+        .seccion {
+            padding: 20px;
+            background-color: #eeeeee;
+        }
+
+        .resaltada {
+            background-color: #cceeff;
+            border: 2px solid #0077aa;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejercicio 2: Cambio de apariencia</h1>
+
+    <section id="seccion" class="seccion">
+        Esta sección cambia de apariencia.
+    </section>
+
+    <br>
+
+    <button id="cambiar">Cambiar apariencia</button>
+    <button id="restaurar">Restaurar apariencia</button>
+
+    <script>
+        let seccion = document.getElementById("seccion");
+
+        document.getElementById("cambiar").addEventListener("click", function() {
+            seccion.classList.add("resaltada");
+        });
+
+        document.getElementById("restaurar").addEventListener("click", function() {
+            seccion.classList.remove("resaltada");
+        });
+    </script>
+
+</body>
+</html>

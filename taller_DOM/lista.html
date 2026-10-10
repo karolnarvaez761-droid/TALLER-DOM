@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista dinámica</title>
+</head>
+<body>
+
+    <h1>Ejercicio 4: Lista dinámica</h1>
+
+    <input type="text" id="nuevoElemento" placeholder="Escribe una tarea">
+    <button id="agregar">Agregar</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+        let campo = document.getElementById("nuevoElemento");
+        let lista = document.getElementById("lista");
+
+        document.getElementById("agregar").addEventListener("click", function() {
+            let texto = campo.value.trim();
+
+            if (texto === "") {
+                alert("Escribe una tarea antes de agregarla.");
+                return;
+            }
+
+            let elemento = document.createElement("li");
+            elemento.textContent = texto;
+
+            let botonEliminar = document.createElement("button");
+            botonEliminar.textContent = "Eliminar";
+
+            botonEliminar.addEventListener("click", function() {
+                elemento.remove();
+            });
+
+            elemento.appendChild(document.createTextNode(" "));
+            elemento.appendChild(botonEliminar);
+
+            lista.appendChild(elemento);
+
+            campo.value = "";
+            campo.focus();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Seguimiento de escritura</title>
+</head>
+<body>
+
+    <h1>Ejercicio 3: Seguimiento de escritura</h1>
+
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+
+    <p>Lo que escribes: <span id="resultado"></span></p>
+
+    <script>
+        let campo = document.getElementById("texto");
+        let resultado = document.getElementById("resultado");
+
+        campo.addEventListener("input", function() {
+            resultado.textContent = campo.value;
+            console.log("Contenido actual:", campo.value);
+        });
+    </script>
+
+</body>
+</html>

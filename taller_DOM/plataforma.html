@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plataforma educativa</title>
+</head>
+<body>
+
+    <h1>Plataforma educativa SENA</h1>
+
+    <label for="curso">Buscar curso:</label>
+
+    <input
+        id="curso"
+        type="text"
+        placeholder="Escribe el nombre del curso"
+    >
+
+    <button id="buscar">Buscar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        let campoCurso = document.getElementById("curso");
+        let resultado = document.getElementById("resultado");
+
+        campoCurso.addEventListener("input", function() {
+            resultado.textContent = "Buscando: " + campoCurso.value;
+        });
+
+        document.getElementById("buscar").addEventListener("click", function() {
+            if (campoCurso.value.trim() === "") {
+                resultado.textContent = "Escribe el nombre de un curso.";
+            } else {
+                resultado.textContent = "Consulta realizada para: " + campoCurso.value;
+            }
+        });
+    </script>
+
+</body>
+</html>
